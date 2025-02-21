@@ -1,0 +1,40 @@
+Explanation of Each Part
+<!DOCTYPE html>
+
+Declares the document type as HTML5.
+Ensures the browser renders the page in standard mode.
+<html lang="en">
+
+The root element of an HTML document.
+The lang="en" attribute specifies the language of the document (English in this case).
+<head>
+
+Contains metadata (information about the document).
+
+Key Elements in <head>:
+
+<meta charset="UTF-8">: Ensures proper text encoding for various characters.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Makes the webpage responsive on all devices.
+<title>Document</title>: Sets the title of the webpage (visible in the browser tab).
+<link rel="stylesheet" href="styles.css">: Links an external CSS file for styling.
+<script src="script.js" defer></script>: Links an external JavaScript file with defer, ensuring it loads after the HTML is parsed.
+<body>
+
+Contains the content of the webpage (text, images, links, etc.).
+In this example, it contains an <h1> heading with "Hello, World!".
+Uses of HTML Boilerplate
+Ensures Proper Page Structure
+
+Provides a well-formed document structure that browsers can interpret correctly.
+Faster Development
+
+Acts as a template, so developers don’t need to rewrite common elements for every new project.
+Improves SEO and Accessibility
+
+The <title> and <meta> tags help with search engine rankings and user experience.
+Enhances Cross-Browser Compatibility
+
+The <!DOCTYPE html> declaration ensures the page is rendered consistently across different browsers.
+Supports Mobile Responsiveness
+
+The <meta name="viewport"> tag makes the page adapt to different screen sizes.
