@@ -1,0 +1,6 @@
+work with % to make the websites responsive avoid giving heights and width fixed values
+
+em font size is related to parent fontsize if no font on parent then default is 16px 
+in em for margin and padding it looks for current div font sizee
+
+rem look for the font size of root that is html
