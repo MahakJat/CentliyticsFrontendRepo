@@ -4,3 +4,7 @@ em font size is related to parent fontsize if no font on parent then default is 
 in em for margin and padding it looks for current div font sizee
 
 rem look for the font size of root that is html
+
+
+em and rem use karne se hum media query me sirf ek jagah change 
+karge toh sare pages ke font size change ho jata hai rather then har ek element me alag change
