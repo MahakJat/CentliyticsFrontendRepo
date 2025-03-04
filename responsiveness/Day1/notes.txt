@@ -8,3 +8,5 @@ rem look for the font size of root that is html
 
 em and rem use karne se hum media query me sirf ek jagah change 
 karge toh sare pages ke font size change ho jata hai rather then har ek element me alag change
+
+use of vh vw for title is really good because it change on changing the viewport (use vh more not vw because the font may become too small on making view port small)

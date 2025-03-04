@@ -180,8 +180,24 @@ section{
 nav{
     display: flex;
     background-color: #004375;
-    padding: 2.5vh;
+    padding: 2.5vh;   
     justify-content: space-between;
+}
+.nav-div{
+    display: flex;
+    width: 85%;
+    justify-content: flex-start;
+}
+.nav-div-1{
+    border-right: 1px solid #ffffff3a; 
+    padding-right: 5%;
+    padding-left:1% ;
+
+}
+.nav-div-2{
+    border-right: 1px solid #ffffff3a; 
+    padding-left:3% ;
+    padding-right: 15%;
 }
 
 .nav-bar-btn{
@@ -209,6 +225,7 @@ nav{
 }
 
 /* nav-division */
+
 .nav-div-1 h6{
     font-weight: 400;
     font-size: 1.5vh;
@@ -576,6 +593,17 @@ height: 10px;
   }
   .nav-div-2 h3{
     font-size: 1.2vh;
+  }
+  .nav-div{
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-div-1{
+    border-right:none ;
+  }
+  .nav-div-2{
+    border-right: none;
+    border-left:1px solid #ffffff3a;  ;
   }
 
     .aside-and-logo{
