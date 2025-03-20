@@ -7,7 +7,7 @@ $parimary-color: #000;
 html,
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 main {
   width: 100%;
@@ -20,7 +20,8 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2.75rem;
+  padding: 0rem 2.75rem;
+  padding-top: 1rem;
   font-size: 0.96rem;
   background-color: #fafafa;
   box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.39);
@@ -30,18 +31,23 @@ nav {
     align-items: center;
     gap: 2.7rem;
     font-weight: 500;
-
+    
     a {
-      transition: all ease 0.5s;
+      transition: all ease 0.1s;
+      height: 100%;
+      transition: all ease 0.2s;
     }
     a:hover {
       color: #ffab42;
+      border-bottom: 0.25rem solid #ffab42;
     }
+    
   }
   .right-nav-part {
     display: flex;
     align-items: center;
     gap: 1.25rem;
+    padding-bottom: 1.05rem;
 
     .contant-us {
       padding: 0.25rem 1rem;

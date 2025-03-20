@@ -17,8 +17,11 @@ const threeLines = (str) => {
 
 let section_2 = document.querySelector('.section-2');
 let str = '';
+
+
+
 jsonData.map(function(elem){
-    str += `   <div class="card">
+    str += `<div class="card">
                  <div class="heading-para">
                 <h3>${elem.service_name}</h3>
                 <p>${threeLines(elem.service_description)}</p>
@@ -32,5 +35,8 @@ jsonData.map(function(elem){
                 </div>
             </div>`
 })
+
+
+// console.log(str);
 
 section_2.innerHTML = str;

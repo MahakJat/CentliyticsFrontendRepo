@@ -7,7 +7,7 @@
 html,
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 main {
@@ -19,7 +19,8 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2.75rem;
+  padding: 0rem 2.75rem;
+  padding-top: 1rem;
   font-size: 0.96rem;
   background-color: #fafafa;
   box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.39);
@@ -31,15 +32,19 @@ nav .mid-nav-part {
   font-weight: 500;
 }
 nav .mid-nav-part a {
-  transition: all ease 0.5s;
+  transition: all ease 0.1s;
+  height: 100%;
+  transition: all ease 0.2s;
 }
 nav .mid-nav-part a:hover {
   color: #ffab42;
+  border-bottom: 0.25rem solid #ffab42;
 }
 nav .right-nav-part {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  padding-bottom: 1.05rem;
 }
 nav .right-nav-part .contant-us {
   padding: 0.25rem 1rem;
