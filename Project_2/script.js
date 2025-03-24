@@ -29,17 +29,19 @@ jsonData.map(function(elem){
 })
 
 cardSection.innerHTML = str;
-let cards = document.querySelectorAll('.card');
 
-cards.forEach(function(elem){
+let Part_1_cards = document.querySelectorAll('.section-2-part-1-cards .card');
+
+Part_1_cards.forEach(function(elem){
     let isSelected = false;
     elem.addEventListener("click",function(){
         if(!isSelected){
              elem.style.border = `1px solid #ffb938`
+             
              section_2_part_1.style.width = '30%'
              section_2_cards.style.flexDirection = 'column'
              section_2_part_1_header.style.flexDirection ='column'
-            cards.forEach(function(card){
+             Part_1_cards.forEach(function(card){
                 card.style.width = '100%'
             })
              
@@ -48,7 +50,7 @@ cards.forEach(function(elem){
             section_2_part_1.style.width = '100%'
             section_2_cards.style.flexDirection = 'row'
              section_2_part_1_header.style.flexDirection ='row'
-            cards.forEach(function(card){
+             Part_1_cards.forEach(function(card){
                 card.style.width = '32.5%'
             })
         }
@@ -57,27 +59,25 @@ cards.forEach(function(elem){
 })
 
 
-
-// cards.forEach(function(elem){
-//     let isSelected = false;
-//     elem.addEventListener('click',function(){
-//          if(!isSelected){
-//             elem.style.border = `1px solid #ffb938`
-//             section_2_part_1.style.width = '50%'
-//             section_2_part_1.style.flexDirection = 'column' 
-//             cards.forEach(function(card){
-//                 card.style.width = '100%'
-//             })
-//          }else{
-//              elem.style.border = `1px solid #d4d4d4`
-//                 section_2_part_1.style.width = '100%'
-//                 section_2_part_1.style.flexDirection = 'row' 
-//                 cards.forEach(function(card){
-//                     card.style.width = '32.5%'
-//                 })
-//          }
-//          isSelected = !isSelected;
-//     })
-// })
-
-
+let str2 = ''
+let cardContainerPart2 = document.querySelector('.section-2-part-2 .card-container')
+jsonData.map(function(elem){
+ str2+=`<div class="card">
+                       <div class="left-side">
+                           <h2>${elem.service_name}</h2>
+                           <p>${elem.service_description}</p>
+                           <div class="reviews">
+                              <img src="./images/rocket.svg" alt="">
+                              <h4>100+ Successful Deliveries</h4>
+                              <h4 id="review">12 Reviews</h4>
+                              <img src="./images/external-link 1.svg" alt="">
+                           </div>
+                        </div>
+                       <div class="right-side">
+                           <h3>&#8377; ${elem.price} <span>/ wireframe</span></h3>
+                           <h4>Avg.SLA 12hr</h4>
+                           <button>Request</button>
+                       </div>
+                    </div>`
+})
+cardContainerPart2.innerHTML = str2
