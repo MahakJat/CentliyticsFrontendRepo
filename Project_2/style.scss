@@ -73,8 +73,7 @@ nav {
 .section-2 {
   display: flex;
   overflow: hidden;
-  // height: 100vh;
-  //  padding-top: 3.5rem;
+  
   .section-2-part-1 {
 
     // scroll-bar-remove
@@ -83,7 +82,7 @@ nav {
     // }
 
     height: 100vh;
-    overflow-y: auto; //ye mene independent scrolling ke liye use kiya hai aur height bhi isliye di hai
+    overflow-y: auto;   //ye mene independent scrolling ke liye use kiya hai aur height bhi isliye di hai
 
     padding: 1.25rem 1.75rem;
     width: 100%;
@@ -223,9 +222,9 @@ nav {
   }
   .section-2-part-2 {
 
-    &::-webkit-scrollbar{
-      display: none;
-    }
+    // &::-webkit-scrollbar{
+    //   display: none;
+    // }
 
     overflow-y: auto;  /* Independent vertical scrolling */
     height: 100vh;

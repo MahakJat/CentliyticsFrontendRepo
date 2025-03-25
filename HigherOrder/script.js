@@ -8,6 +8,7 @@ console.log(evenNumbers); // [2, 4, 6]
 const nums = [1, 2, 3, 4];
 const squares = nums.map(num => num * num);
 console.log(squares); // [1, 4, 9, 16]
+console.log(nums);
 
 
 // 3. sort() – Sorts an array (modifies the original array).
