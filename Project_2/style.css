@@ -77,6 +77,9 @@ nav a {
   border-right: 1px solid rgba(128, 128, 128, 0.333);
   box-shadow: 1px 0px 0.62rem rgba(128, 128, 128, 0.646);
 }
+.section-2 .section-2-part-1::-webkit-scrollbar {
+  display: none;
+}
 .section-2 .section-2-part-1 .section-2-part-1-header {
   width: 100%;
   display: flex;
@@ -321,4 +324,5 @@ nav a {
   background-color: #262626;
   color: white;
   border-radius: 0.5rem;
+  border: none;
 }/*# sourceMappingURL=style.css.map */

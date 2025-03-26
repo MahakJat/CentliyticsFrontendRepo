@@ -21,8 +21,7 @@ const names = [
     'Strawberry',
 ];
 const arr = names.map(names => names.toLowerCase());
-console.log(arr);
-console.log(names)
+
 searchBar.addEventListener('input', () => {
     const filter = searchBar.value.toLowerCase();
     suggestions.innerHTML = '';
@@ -38,10 +37,11 @@ searchBar.addEventListener('input', () => {
     } else {
         suggestions.style.display = 'none'; 
     }
+    console.log(filteredNames)
 });
 
 button.addEventListener('click',function(){
-    // console.log(searchBar2.value);
-    const filteredNames = names.filter(name => name.toLowerCase() === searchBar2.value);
-    
+    console.log(searchBar2.value);
+    const filteredName = names.filter(name => name === searchBar2.value);
+    console.log(filteredName)
 })
