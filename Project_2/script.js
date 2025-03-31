@@ -169,12 +169,7 @@ const cardClickedFunc = ()=>{
     cardSection.addEventListener('click', function (elem) {
         let clickedCard = elem.target.closest('.card');
         if (!clickedCard) return;// Agar click kisi card par nahi hua toh kuch mat karo
-        let isSelected = clickedCard.classList.contains("selected");
-    
-    
-    
-
-     
+        let isSelected = clickedCard.classList.contains("selected");     
 
        if(!isSelected){
           clickedCard.classList.add("selected");
@@ -187,8 +182,7 @@ const cardClickedFunc = ()=>{
           cardSection.childNodes.forEach(card => {
             card.style.width = "100%"
           })
-   
-              
+                
        } 
        else{
             clickedCard.classList.remove("selected");
