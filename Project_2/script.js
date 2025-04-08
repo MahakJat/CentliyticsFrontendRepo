@@ -181,11 +181,12 @@ const cardClickedFunc = ()=>{
        if(!isSelected){
           clickedCard.classList.add("selected");
           clickedCard.style.border = `1px solid #ffb938`;  
+           section_2_part_1_header.style.flexDirection ='column'
           section_2_part_1.style.width = '33%'
-          section_2_cards.style.flexDirection = 'column'
-          section_2_part_1_header.style.flexDirection ='column'
-          section_2_part_1.style.overflowY='auto'
-          section_2_part_1.style.height = '100vh'
+        //   section_2_cards.style.flexDirection = 'column'
+         
+        //   section_2_part_1.style.overflowY='auto'
+        //   section_2_part_1.style.height = '100vh'
           cardSection.childNodes.forEach(card => {
             card.style.width = "100%"
           })
@@ -193,16 +194,15 @@ const cardClickedFunc = ()=>{
           document.querySelector('.section-2-footer').style.gap = '0.5rem'      
        }  
     close_div.addEventListener('click',function(){
-
         clickedCard.classList.remove("selected");
         clickedCard.style.border = `1px solid #d4d4d4`
-    section_2_part_1.style.width = '100%'
-    section_2_cards.style.flexDirection = 'row'
+      section_2_part_1.style.width = '100%'
+    // section_2_cards.style.flexDirection = 'row'
      section_2_part_1_header.style.flexDirection ='row'
 
     //  for independent scrolling wala part
-       section_2_part_1.style.overflowY='hidden'
-       section_2_part_1.style.height = 'auto'
+    //    section_2_part_1.style.overflowY='hidden'
+    //    section_2_part_1.style.height = 'auto'
        cardSection.childNodes.forEach(card => {
         card.style.width = "32.5%"
       })
@@ -250,9 +250,10 @@ const filter = ()=>{
 }
 
 const filter_high_low  = ()=>{
- let sortedArr =  jsonData.sort((a,b)=>b.price - a.price);
+
+ let sortedArr = [...jsonData].sort((a,b)=>b.price - a.price); //slicing isliye use ki hai ki original array modify na ho
  let str = '';
- sortedArr.map(function(elem){
+ sortedArr.map(function(elem,idx){
     if(elem.price !== null){
      str += `<div class="card">
                   <div class="heading-para">
@@ -274,7 +275,7 @@ const filter_high_low  = ()=>{
  fixWidth() 
 }
 const filter_low_high  = ()=>{
-    let sortedArr =  jsonData.sort((a,b)=>a.price - b.price);
+    let sortedArr =  [...jsonData].sort((a,b)=>a.price - b.price);
     let str = '';
     sortedArr.map(function(elem){
         if(elem.price !== null){
@@ -299,7 +300,7 @@ const filter_low_high  = ()=>{
 }
 
 const filter_a_z  = ()=>{
-    let sortedArr =  jsonData.sort((a,b)=>a.practice_name.localeCompare(b.practice_name));
+    let sortedArr =  [...jsonData].sort((a,b)=>a.service_name.localeCompare(b.service_name));
     // sortedArr.forEach(function(elem){
     //     console.log(elem.practice_name)
     // })
@@ -326,7 +327,7 @@ const filter_a_z  = ()=>{
     fixWidth()
 }
 const filter_z_a  = ()=>{
-    let sortedArr =  jsonData.sort((a,b)=>b.practice_name.localeCompare(a.practice_name));
+    let sortedArr =  [...jsonData].sort((a,b)=>b.service_name.localeCompare(a.service_name));
 
     let str = '';
     sortedArr.map(function(elem){
@@ -350,6 +351,18 @@ const filter_z_a  = ()=>{
     cardSection.innerHTML = str;  
     fixWidth()
 }
+
+const refresh_left = document.querySelector('.refresh_left');
+refresh_left.addEventListener('click',function(){
+    section_2_part_1_cardsAdded(); 
+     //pervious cards as it is aa jayege;
+    fixWidth();
+})
+const refresh_right = document.querySelector('.refresh_right');
+refresh_right.addEventListener('click',function(){
+    section_2_part_2_cardsAdded()
+})
+
 
 const lh = document.querySelector('.lh');
 const hl = document.querySelector('.hl');
@@ -408,7 +421,7 @@ const filterRight = ()=>{
 const filter_high_low_right   = ()=>{
     let cardContainer = document.querySelector('.section-2-part-2 .card-container');
 
-    let sortedArr =  jsonData.sort((a,b)=>b.price - a.price);
+    let sortedArr =  [...jsonData].sort((a,b)=>b.price - a.price);
     let str = '';
     sortedArr.map(function(elem){
        if(elem.price !== null){
@@ -436,7 +449,7 @@ const filter_high_low_right   = ()=>{
 const filter_low_high_right   = ()=>{
     let cardContainer = document.querySelector('.section-2-part-2 .card-container');
    
-    let sortedArr =  jsonData.sort((a,b)=>a.price - b.price);
+    let sortedArr =  [...jsonData].sort((a,b)=>a.price - b.price);
        let str = '';
        sortedArr.map(function(elem){
            if(elem.price !== null){
@@ -465,7 +478,7 @@ const filter_low_high_right   = ()=>{
 const filter_a_z_right   = ()=>{
     let cardContainer = document.querySelector('.section-2-part-2 .card-container');
      
-    let sortedArr =  jsonData.sort((a,b)=>a.practice_name.localeCompare(b.practice_name));
+    let sortedArr =  [...jsonData].sort((a,b)=>a.service_name.localeCompare(b.service_name));
        // sortedArr.forEach(function(elem){
        //     console.log(elem.practice_name)
        // })
@@ -496,7 +509,7 @@ const filter_a_z_right   = ()=>{
 const filter_z_a_right   = ()=>{
     let cardContainer = document.querySelector('.section-2-part-2 .card-container');
    
-    let sortedArr =  jsonData.sort((a,b)=>b.practice_name.localeCompare(a.practice_name));
+    let sortedArr =  [...jsonData].sort((a,b)=>b.service_name.localeCompare(a.service_name));
    
        let str = '';
        sortedArr.map(function(elem){
