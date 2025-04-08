@@ -206,6 +206,40 @@ nav a {
 .section-2 .section-2-part-1 .section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-hidden {
   display: none;
 }
+.section-2 .section-2-part-1 .section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-hidden .searchPractices {
+  margin: 0.8rem 0;
+  display: flex;
+  border: 1px solid gray;
+  gap: 0.2rem;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
+}
+.section-2 .section-2-part-1 .section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-hidden .searchPractices img {
+  width: 10%;
+}
+.section-2 .section-2-part-1 .section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-hidden .searchPractices input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.section-2 .section-2-part-1 .section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-hidden .searchPractices input::-moz-placeholder {
+  font-size: 0.75rem;
+  color: rgba(119, 118, 118, 0.8862745098);
+}
+.section-2 .section-2-part-1 .section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-hidden .searchPractices input::placeholder {
+  font-size: 0.75rem;
+  color: rgba(119, 118, 118, 0.8862745098);
+}
+.section-2 .section-2-part-1 .section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-hidden .checkbox-div {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.3rem;
+}
+.section-2 .section-2-part-1 .section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-hidden .checkbox-div h3 {
+  font-size: 0.7rem;
+  color: rgba(108, 105, 105, 0.8745098039);
+  cursor: pointer;
+}
 .section-2 .section-2-part-1 .section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-hidden h4 {
   font-size: 0.7rem;
   background-color: rgba(181, 181, 181, 0.1333333333);
@@ -428,7 +462,9 @@ nav a {
   align-items: end;
 }
 .section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .headsection h4 {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 .section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .headsection img:hover {
   cursor: pointer;
@@ -449,6 +485,8 @@ nav a {
   padding: 0.2rem;
   border-radius: 0.25rem;
   cursor: pointer;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 .section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .filter-division-list .filter-division-list-head {
   width: 100%;
@@ -460,8 +498,9 @@ nav a {
 }
 .section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .filter-division-list h3 {
   font-size: 0.8rem;
-  color: rgba(108, 105, 105, 0.9019607843);
-  font-weight: 500;
+  color: black;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 .section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter {
   border: 1px solid #d4d4d4;
@@ -502,7 +541,6 @@ nav a {
 .section-2 .section-2-part-2 .card-container {
   overflow-y: auto; /* Independent vertical scrolling */
   height: 100vh;
-  margin-top: 2rem;
 }
 .section-2 .section-2-part-2 .card-container::-webkit-scrollbar {
   display: none;

@@ -216,11 +216,11 @@ const cardClickedFunc = ()=>{
 const filter = ()=>{
     const filterBtn = document.querySelector('.section-2-part-1-header .searchBar-and-filter .filter');
     const filter_division = document.querySelector('.section-2-part-1-header .searchBar-and-filter .filter-division')
-    const filter_open_btn = document.querySelector('.section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-head img');
-    const filter_open = document.querySelector('.section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-hidden');
+    const filter_open_btn = document.querySelectorAll('.section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-head img');
+    const filter_open = document.querySelectorAll('.section-2-part-1-header .searchBar-and-filter .filter-division .filter-division-list .filter-division-list-hidden');
     const close = document.querySelector('.section-2-part-1-header .searchBar-and-filter .filter-division .headsection .close')
     let isSelected = false;
-    let isOpen = false;
+    // let isOpen = false;
 
     close.addEventListener('click',function(){
         filterBtn.style.border = '1px solid #d4d4d4'
@@ -228,14 +228,22 @@ const filter = ()=>{
         isSelected = false;
     })
 
-    filter_open_btn.addEventListener('click',function(){
-        if(!isOpen)
-        filter_open.style.display = 'block'
-        else{
-              filter_open.style.display = 'none'
-        }
-        isOpen = !isOpen;
+
+    filter_open_btn.forEach(function(elem,index){
+        elem.addEventListener('click',function(){
+            // if(!isOpen)
+            //     filter_open.style.display = 'block'
+            //     else{
+            //           filter_open.style.display = 'none'
+            //     }
+            //     isOpen = !isOpen;
+            const currentfilterhiddenDiv = filter_open[index]; //joh filterbtn pe click karege woh div ka index hi hidden div ka index hoga
+            let openOrclose = currentfilterhiddenDiv.style.display === 'block' 
+            currentfilterhiddenDiv.style.display = openOrclose ? 'none' : 'block';
+        })
     })
+
+   
 
     filterBtn.addEventListener('click',()=>{
       if(!isSelected){
