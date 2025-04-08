@@ -1,0 +1,9 @@
+localeCompare() compares two strings alphabetically.
+it is case insensitive 
+string1.localeCompare(string2)
+Return values:
+-1 → string1 comes before string2 alphabetically.
+
+0 → string1 and string2 are equal.
+
+1 → string1 comes after string2 alphabetically.

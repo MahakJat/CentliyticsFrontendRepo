@@ -17,13 +17,15 @@ main {
 
 nav {
   width: 100%;
+  position: fixed;
+  top: 0%;
   display: flex;
   justify-content: space-between;
   padding: 0rem 2.75rem;
   padding-top: 1rem;
   font-size: 0.96rem;
   background-color: #fafafa;
-  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.39);
+  z-index: 100;
 }
 nav .mid-nav-part {
   display: flex;
@@ -72,10 +74,10 @@ nav a {
   height: auto;
   overflow-y: hidden;
   padding: 1.25rem 1.75rem;
+  padding-top: 5rem;
   width: 100%;
   flex-shrink: 0;
   border-right: 1px solid rgba(128, 128, 128, 0.164);
-  box-shadow: 1px 0px 0.6rem rgba(128, 128, 128, 0.186);
 }
 .section-2 .section-2-part-1::-webkit-scrollbar {
   display: none;
@@ -278,12 +280,61 @@ nav a {
   font-size: 0.8rem;
   background-image: linear-gradient(to right, #fffdfb, rgba(246, 232, 206, 0.9450980392));
 }
+.section-2 .section-2-part-1 .section-2-footer {
+  background-color: #F4F4F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  gap: 1rem;
+  border-radius: 0.95rem;
+}
+.section-2 .section-2-part-1 .section-2-footer h4 {
+  color: rgb(107, 107, 107);
+  font-weight: 500;
+}
+.section-2 .section-2-part-1 .section-2-footer a {
+  background-color: #090909;
+  color: white;
+  text-decoration: none;
+  padding: 0.25rem 1.75rem;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+}
+.section-2 .section-2-part-1 .not-data-found {
+  background-color: #FCFCFC;
+  padding: 0.5rem;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  border: 1px solid #e4e2e2;
+  margin-bottom: 2rem;
+}
+.section-2 .section-2-part-1 .not-data-found img {
+  width: 4.5rem;
+}
+.section-2 .section-2-part-1 .not-data-found h4 {
+  color: #262626;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.section-2 .section-2-part-1 .not-data-found h5 {
+  color: #262626;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
 .section-2 .section-2-part-2 {
   overflow-y: auto; /* Independent vertical scrolling */
   height: 100vh;
   width: 67%;
+  margin-top: 4.2rem;
   flex-shrink: 0;
   padding: 1.25rem 1.75rem;
+  background-color: #FFFFFF;
 }
 .section-2 .section-2-part-2::-webkit-scrollbar {
   display: none;
@@ -334,7 +385,64 @@ nav a {
   font-size: 0.85rem;
   transition: all ease 0.2s;
 }
-.section-2 .section-2-part-2 .searchBar-and-filter .filter {
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div {
+  position: relative;
+}
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division {
+  background-color: #ffffff;
+  position: absolute;
+  padding: 0 1rem;
+  top: 145%;
+  right: 0%;
+  width: 15rem;
+  display: none;
+  border-radius: 0.5rem;
+  border: 1px solid #c6c6c6;
+}
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .headsection {
+  display: flex;
+  padding: 0.5rem 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: end;
+}
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .headsection h4 {
+  font-size: 0.85rem;
+}
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .headsection img:hover {
+  cursor: pointer;
+}
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .filter-division-list {
+  padding: 0.5rem 0.5rem;
+  width: 100%;
+  border-top: 2px solid rgba(128, 128, 128, 0.357);
+}
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .filter-division-list .filter-division-list-hidden {
+  display: none;
+}
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .filter-division-list .filter-division-list-hidden h4 {
+  font-size: 0.7rem;
+  background-color: rgba(181, 181, 181, 0.1333333333);
+  margin-top: 0.5rem;
+  color: rgba(108, 105, 105, 0.8745098039);
+  padding: 0.2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .filter-division-list .filter-division-list-head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .filter-division-list .filter-division-list-head img {
+  cursor: pointer;
+}
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter-division .filter-division-list h3 {
+  font-size: 0.8rem;
+  color: rgba(108, 105, 105, 0.9019607843);
+  font-weight: 500;
+}
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter {
   border: 1px solid #d4d4d4;
   display: flex;
   justify-content: center;
@@ -344,7 +452,7 @@ nav a {
   cursor: pointer;
   transition: all ease 0.2s;
 }
-.section-2 .section-2-part-2 .searchBar-and-filter .filter:hover {
+.section-2 .section-2-part-2 .searchBar-and-filter .filter-div-and-hidden-div .filter:hover {
   border: 1px solid #828181;
 }
 .section-2 .section-2-part-2 .section-2-part-2-head {
@@ -439,4 +547,19 @@ nav a {
   color: white;
   border-radius: 0.5rem;
   border: none;
+}
+.section-2 .section-2-part-2 .data_not_found_section_2_part_2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 0.2rem;
+}
+.section-2 .section-2-part-2 .data_not_found_section_2_part_2 h4 {
+  color: #6C6969;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.section-2 .section-2-part-2 .data_not_found_section_2_part_2 a {
+  font-weight: 500;
+  font-size: 1.1rem;
 }/*# sourceMappingURL=style.css.map */
