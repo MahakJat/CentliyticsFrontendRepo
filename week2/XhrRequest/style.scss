@@ -34,5 +34,13 @@ html,body{
                 object-fit: cover;
             }
         }
+
+        .loading{
+            display: none;
+             height: 100%;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+        }
     }
 }

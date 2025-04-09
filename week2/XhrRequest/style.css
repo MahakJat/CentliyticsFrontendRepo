@@ -35,4 +35,11 @@ html, body {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main .cardcontainer .loading {
+  display: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

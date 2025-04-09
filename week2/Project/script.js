@@ -2,10 +2,11 @@ const cardContainer = document.querySelector('.cardContainer');
 
 async function fetchingProducts() {
     try{
+        document.querySelector('.loading').style.display = 'block';
         let response = await fetch('https://fakestoreapi.com/products');
-        console.log(response)
+        // console.log(response)
         let products = await response.json();
-        console.log(products)
+        // console.log(products)
         let str = ''
         products.map((elem)=>{
            str += `    <div class="card">
@@ -18,7 +19,8 @@ async function fetchingProducts() {
                 <div class="btn">Add to cart</div>
            </div>`
         })
-
+       
+        document.querySelector('.loading').style.display = 'none';
         cardContainer.innerHTML = str;
 
     }catch(error){
